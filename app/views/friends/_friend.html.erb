@@ -1,0 +1,39 @@
+<% if user_signed_in? %>
+
+  <div id="<%= dom_id friend %>" class="friend">
+    <!-- <p> -->
+      <!-- <strong>First name</strong> -->
+      <h5><%= friend.first_name %></h5>
+    <!-- </p> -->
+
+    <!-- <p> -->
+      <!-- <strong>Last name</strong> -->
+      <h5><%= friend.last_name %></h5>
+    <!-- </p> -->
+
+    <!-- <p> -->
+      <!-- <strong>Email</strong> -->
+      <h5><%= friend.email %></h5>
+    <!-- </p> -->
+
+    <!-- <p>
+      <strong>Phone</strong> -->
+
+      <h5><%= friend.phone %></h5>
+    <!-- </p> -->
+
+    <!-- <p>
+      <strong>Facebook</strong> -->
+      <h5><%= friend.facebook %></h5>
+
+      <h5><%= friend.user_id%></h5>
+    
+    <!-- </p> -->
+
+  </div>
+
+<% else %>
+  
+  <%= render "devise/sessions/new" %>
+  
+<% end %>

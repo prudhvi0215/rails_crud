@@ -1,0 +1,27 @@
+.navBar{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+	background: mintcream;
+}
+
+.navBar div{
+	display: flex;
+	flex-direction: row;
+}
+
+.navBar div h2{
+	margin: 1%;
+	font-family: times new roman;
+	text-decoration: none;	
+}
+
+.navBar div h2:hover{
+	cursor: pointer;	
+}
+
+.navBar h1{
+	font-weight: 800;	
+	color: chocolate; !important
+}

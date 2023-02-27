@@ -1,0 +1,14 @@
+<div class="navBar">
+	<h1>Friends Club</h1>	
+	<div>
+		<% if user_signed_in? %>
+			<h2><%= link_to "Add(+) Friend", new_friend_path%></h2>
+			<h2><%= link_to "Friends List", friends_path%></h2>
+			<h2><%= link_to "Edit Profile", edit_user_registration_path%></h2>
+			<h2><%= link_to "Sign out", destroy_user_session_path, method: :delete %></h2>			
+		<% else %>		
+			<h2><%= link_to "Sign Up", new_user_registration_path%></h2>
+			<h2><%= link_to "Sign In", new_user_session_path%></h2>
+		<% end %>
+	</div>
+</div>

@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+<% if user_signed_in? %>
+  
+  <h1>Friends</h1>
+
+  <div id="friends">
+    <%= render "friends/header" %>    
+      <% @friends.each do |friend| %>
+        <% if friend.user == current_user%>
+          <%= render friend %>
+          <p>
+            <%= link_to "Show this friend", friend %>
+          </p>
+        <% end %>
+      <% end %>    
+  </div>
+
+<%= link_to "New friend", new_friend_path %>
+
+<% else %>
+  
+  <h2>Please Login to proceed further....</h2>
+  <%= link_to "Login", new_user_session_path %>
+  
+<% end %>
+
+
